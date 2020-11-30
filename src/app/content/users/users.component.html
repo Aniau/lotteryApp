@@ -1,0 +1,13 @@
+<button id="add-user" (click)="addUser()"><img src ="./assets/add-user.svg"></button>
+<button class="mat-stroked-button" name="Click" value="Click" (click)="sendUsers()">Sign Players</button>
+
+<div class="users" *ngFor="let player of players; let i = index;">
+    <mat-form-field class="players">
+        <mat-label>Player {{ i + 1 }}</mat-label>
+        <input matInput name="ngModel" value="{{player.name}}" >
+    </mat-form-field>
+    <button id="remove-user" (click)="removeUser(i)"><img src ="./assets/remove-user.svg"></button>
+</div>
+
+<app-logs *ngIf="showLogs"></app-logs>
+ 

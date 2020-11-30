@@ -1,0 +1,55 @@
+#buttons
+{
+    width: 50%;
+}
+
+#radio_buttons
+{
+    text-align: left;
+}
+
+#circle_red
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 50px;
+    transition: all .2s ease-in-out;
+}
+/* #circle_red:hover 
+{ 
+    transform: scale(1.1); 
+} */
+
+#circle_black
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 50px;
+    transition: all .2s ease-in-out;
+}
+
+/* #circle_black:hover 
+{ 
+    transform: scale(1.1); 
+} */
+
+.radio
+{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio + img 
+{
+    cursor: pointer;
+}
+
+.radio:checked + img
+{
+    border: 5px outset gold;
+    border-radius: 50%;
+}

@@ -1,0 +1,16 @@
+app-users
+{
+    width: 25%;
+}
+
+app-input
+{
+    width: 25%;
+}
+
+app-output
+{
+    width: 40%;
+    display: inline-block;
+    margin-left: 100px
+}
