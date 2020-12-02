@@ -14,6 +14,14 @@ export class OutputComponent implements OnInit {
   Lottery()
   {
     let lottery = Math.round(Math.random() * 1) ? 1 : 0;
+    // if(document.getElementById("black").)
+		// {
+		// 	document.getElementById("wybrana_bila").innerHTML = "Wybrałeś bilę <b>CZARNĄ</b>";
+		// }
+		// else if (document.getElementById("red").selec)
+		// {
+		// 	document.getElementById("wybrana_bila").innerHTML = "Wybrałeś bilę <b>CZERWONĄ</b>";
+		// }
     if(lottery === 0)
     {
         document.getElementById("wygrana").innerHTML = 'PRZEGRANA';

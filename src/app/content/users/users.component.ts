@@ -11,11 +11,9 @@ import { Player } from '../models/player';
 })
 export class UsersComponent implements OnInit 
 {
-  public test: string;
-
   public players: Array<Player> = [];
 
-  public showLogs: boolean;
+  public showLogs: boolean | undefined;
 
   constructor(private userDataService: UserDataService) { }
 

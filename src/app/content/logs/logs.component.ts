@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from 'src/app/user-data-service.service';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-logs',
