@@ -10,7 +10,7 @@ import { Player } from '../models/player';
 })
 export class LogsComponent implements OnInit {
 
-  public players: Player[];
+  public players: Array<Player> = [];
 
   constructor(private userDataService: UserDataService) 
   {   

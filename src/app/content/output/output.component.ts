@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutputComponent implements OnInit {
 
+  public result: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  Lottery()
+  public Lottery(): void
   {
     let lottery = Math.round(Math.random() * 1) ? 1 : 0;
     // if(document.getElementById("black").)
@@ -21,14 +23,15 @@ export class OutputComponent implements OnInit {
 		// else if (document.getElementById("red").selec)
 		// {
 		// 	document.getElementById("wybrana_bila").innerHTML = "Wybrałeś bilę <b>CZERWONĄ</b>";
-		// }
+    // }
+    
     if(lottery === 0)
     {
-        document.getElementById("wygrana").innerHTML = 'PRZEGRANA';
+        this.result =  'PRZEGRANA';
     }
     if(lottery === 1)
     {
-        document.getElementById("wygrana").innerHTML = 'WYGRANA';
+        this.result = 'WYGRANA';
     }
   }
 
