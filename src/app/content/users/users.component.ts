@@ -1,42 +1,32 @@
-import { InputOutputPropertySet } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { UserDataService } from 'src/app/user-data-service.service';
+import { UserDataService } from 'src/app/user-data.service';
 import { Player } from '../models/player';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
-  providers: [UserDataService]
 })
-export class UsersComponent implements OnInit 
-{
+export class UsersComponent implements OnInit {
   public players: Array<Player> = [];
 
-  public showLogs: boolean | undefined;
+  @Output() showLogs: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private userDataService: UserDataService) { }
+  constructor(private userDataService: UserDataService) {}
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {}
+
+  public removeUser(index: number): void {
+    this.players.splice(index, 1);
   }
 
-  public removeUser(index: number): void
-  {
-    this.players.splice(index,1);
-  }
-
-  public addUser()
-  {
+  public addUser() {
     const playersCount = this.players.length;
 
     this.players.push(new Player('Player ' + (playersCount + 1)));
   }
 
-  public sendUsers(): void
-  {
+  public sendUsers(): void {
     this.userDataService.usersData(this.players);
-
-    this.showLogs = true;
   }
 }

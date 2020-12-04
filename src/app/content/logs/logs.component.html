@@ -1,4 +1,6 @@
-<h1>Statystyka</h1>
-<div *ngFor="let player of players">
-    {{player.name}}
+<div *ngIf="showLogs">
+  <h1>Statystyka</h1>
+  <div *ngFor="let player of players">
+    {{ player.name }}
+  </div>
 </div>
